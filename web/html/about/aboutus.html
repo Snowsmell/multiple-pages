@@ -1,0 +1,177 @@
+<% include('../includes/head.html', {
+  title: '',
+  text: '关于我们',
+  styles: ['/@@/styles/aboutus.css'],
+  scripts: ['/@@/scripts/comm/base.js']
+}) %>
+</head>
+
+<body>
+  <!-- @include ./includes/header.html -->
+  <% include('../includes/banner.html', {
+    type: 'aboutus',
+    text: "关于我们",
+    img: "/@@/images/aboutus/aboutus.png"
+  }) %>
+  <main>
+    <div class="introduction">
+      <div class="imgbox">
+        <img src="/@@/images/aboutus/intro.png">
+      </div>
+      <div class="content">
+        <h3>华瑞物联</h3>
+        <p><b style="font-size: 24px">巽畅</b> 华瑞物联科技有限公司成立于2017年，是一家以物联网技术为核心，以电子商务和供应链服务为依托，以金融创新为驱动力的高科技互联网公司，秉承“万物皆联、共生共利”的发展理念，致力于打造车、物、人三位立体的生态物联网络，专注于产融生态圈的新模式，成为全球领先的E站式供应链大数据服务提供商。</p>
+      </div>
+    </div>
+    <div class="culture">
+      <img src="/@@/images/aboutus/culture.jpg">
+      <div class="content">
+        <h3 class="title">
+          <img src="/@@/images/aboutus/title2.png" alt="">
+        </h3>
+        <p><b>愿景</b> 致力于成为全球领先的S2B物联网解决方案供应商的使命。</p>
+        <p><b>使命</b> 积极围绕客户需求，通过不断提升的物联网技术为客户提供优质的信息化服务，努力成为客户心中物联网服务的领导者。</p>
+        <h4>十二条“军规”</h4>
+        <ul>
+          <li>
+            <span>01</span> 不作恶！</li>
+          <li>
+            <span>02</span> 在一起，干大事！</li>
+          <li>
+            <span>03</span> 无所畏，有所为！</li>
+          <li>
+            <span>04</span> 一切以结果为导向！</li>
+          <li>
+            <span>05</span> 自觉工作，自我加压。</li>
+          <li>
+            <span>06</span> 比完美更重要的是完成。</li>
+          <li>
+            <span>07</span> 能做100分，不做99分。</li>
+          <li>
+            <span>08</span> ONE=一次作对，一次做好。</li>
+          <li>
+            <span>09</span> 共享共担，平凡人做非凡事。</li>
+          <li>
+            <span>10</span> 挖掘你的潜能，释放我们的激情。</li>
+          <li>
+            <span>11</span> 推动你的事业，不要让你的事业推动你。</li>
+          <li>
+            <span>12</span> 职业合伙人=职业经理人的素养+合伙人的心态。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="team">
+      <h3 class="title">
+        <img src="/@@/images/aboutus/title3.png">
+      </h3>
+      <a href="/@@/images/aboutus/team.jpg" target="_blank">
+        <img src="/@@/images/aboutus/team.jpg">
+      </a>
+    </div>
+    <div class="staff">
+      <h3 class="title">
+        <img src="/@@/images/aboutus/title4.png">
+        <a href="/@/about/staff.html">查看更多>></a>
+      </h3>
+      <ul class="list " id="stafflist">
+        <template src="./includes/loading.html"></template>
+      </ul>
+    </div>
+    <div class="joinus">
+      <h3 class="title">
+        <img src="/@@/images/aboutus/title5.png">
+        <a href="/@/about/joinus.html#CTO">查看更多>></a>
+      </h3>
+      <ul class="list" id="joblist">
+        <li>
+          <h4>
+            <div>CTO</div>
+          </h4>
+          <dl>
+            <dt>工作职责：</dt>
+            <dd>
+              1.负责组织制定公司系统移动互联网网站整体开发计划，规划公司产品的技术 架构，并组织实施。
+            </dd>
+            <dd>
+              2.负责公司移动互联网产品的整体系统技术架构、服务器架构、网站开 发、产品实现及运维管理...</dd>
+          </dl>
+          <a href="/@/about/joinus.html#CTO">查看详细信息</a>
+        </li>
+        <li>
+          <h4>
+            <div>COO</div>
+          </h4>
+          <dl>
+            <dt>工作职责：</dt>
+            <dd>
+              1.负责平台的整体运营工作，制定运营方案并组织执行，同时需要进行组织团队的搭建。
+            </dd>
+            <dd>
+              2.根据公司的发展规划，结合市场需求，开发设计适合平台的产品、业务流程，制定相应 的推广策略和方案；推动各项业务发展，提升营运效益，确保运营目标的实现。</dd>
+          </dl>
+          <a href="/@/about/joinus.html#COO">查看详细信息</a>
+        </li>
+        <li>
+          <h4>
+            <div>CMO</div>
+          </h4>
+          <dl>
+            <dt>工作职责：</dt>
+            <dd>
+              1.根据公司业务发展战略，制定公司整体市场拓展和品牌推广策略，并跟踪执行。
+            </dd>
+            <dd>
+              2. 负责公司 PC 端和移动端产品的线上线下整合营销，制定符合公司特色的营销推广计划和 策略...</dd>
+          </dl>
+          <a href="/@/about/joinus.html#CMO">查看详细信息</a>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <!-- @include ./includes/footer.html -->
+  <script>
+    function getnews() {
+      API.getStaff({ page_size: 4 }, function(res) {
+        if (!res[0]) {
+          var results = res[1].results
+          if (results.length > 0) {
+            var page = '';
+            results.forEach(function (v, i) {
+              var a = v.summary.length > 40 ? "..." : "";
+              page += '<li>' +
+                '<a href="/@/about/staffdetail.html?id=' + v.id + '">' +
+                '<div class="imgbox">' +
+                '<div>' +
+                '<img src=' + v.image_url + '>' +
+                '</div>' +
+                '</div>' +
+                '<div class="text">' +
+                '<h5>' + v.title + '</h5>' +
+                '<p>' + v.created_time.replace('T', '&nbsp;&nbsp;&nbsp;') + '</p>' +
+                '<p>' + v.summary.substr(0, 40) + a + '</p>                ' +
+                '</div>' +
+                '</a>' +
+                '</li>'
+            })
+            $('#stafflist').html(page)
+
+            if ($(window).width() > 768) {
+              clipimg()
+            }
+          }
+        }
+      })
+    }
+
+    function clipimg() {
+      $('#stafflist img').each(function (i, v) {
+        $(v.parentNode).css({
+          'height': $(v).width() * 0.66
+        })
+      })
+    }
+    getnews()
+  </script>
+</body>
+
+</html>

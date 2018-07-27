@@ -1,0 +1,58 @@
+$title-height: 60px;
+$title-size: 26px;
+
+$bg-color: #f1f5f6;
+$black: #000;
+$cyan: #2EBFDE;
+$orange: #F5A623;
+$white: #fff;
+$dimgray: #595959;
+$lightslategray: #aba8a8;
+$whitesmoke: #f3f3f3;
+$goldenrod: #F5A623;
+$scarlet: #E94156;
+$golenrod: #79C12A;
+$silver: #D8D8D8;
+
+
+@mixin pageBanner{
+  width: 1000px;
+  margin: 20px auto;
+}
+
+@mixin btnColor($color){
+  background-color: $color;
+  border-color: $color;
+  color: $white;
+  &:hover{
+    background-color: $color;
+    border-color: $color;
+  }
+}
+@mixin pt($px) {
+    padding-top: $px;
+}
+@mixin pb($px) {
+  padding-bottom: $px;
+}
+@mixin pl($px) {
+  padding-left: $px;
+}
+@mixin pr($px) {
+  padding-right: $px;
+}
+@mixin mb($px){
+  margin-bottom: $px;
+}
+@mixin mt($px){
+  margin-top: $px;
+}
+
+@mixin txtDire($direction) {
+  text-align: $direction;
+}
+@mixin fontSize($fontSize: 14px, $fontWeight: normal){
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+}
+

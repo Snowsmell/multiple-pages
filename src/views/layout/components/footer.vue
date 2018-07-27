@@ -1,0 +1,34 @@
+<template>
+  <el-footer>
+    <div class="footer">
+      <div class="inner app-wrap">
+        <ul>
+          <li>
+            <a href="javascript:;">公司介绍</a>
+            <a href="javascript:;">加入我们</a>          
+          </li>
+          <li>
+            <p>微信：hwari</p>
+            <p>邮箱:info@hwariot.com</p>
+          </li>
+        </ul>
+        <div class="imgbox">
+          <img src="@/assets/wechat.jpg" alt="华瑞物联公众号">
+          <img src="@/assets/qrcode.jpg" alt="华瑞物联App">
+        </div>        
+      </div>
+      <div class="copyright">
+        版权所有️©2018 巽畅华瑞物联科技有限公司  &nbsp;
+        <span class="space"></span>
+        <a href="http://www.miitbeian.gov.cn/" target="_blank">沪ICP备17044103号-1</a>
+      </div>
+    </div>
+  </el-footer>
+</template>
+<script>
+export default {
+  data() {
+    return {}
+  }
+}
+</script>

@@ -1,0 +1,31 @@
+<% include('../includes/head.html', {
+  title: '',
+  text: '员工风采',
+  styles: ['/@@/styles/news.css'],
+  scripts: ['/@@/scripts/comm/base.js', '/@@/scripts/staff.js']
+}) %>
+</head>
+<body>
+  <!-- @include ./includes/header.html -->
+  <% include('../includes/banner.html', {
+    type: 'staff',
+    text: "员工风采",
+    img: "/@@/images/aboutus/staff.png"
+  }) %>
+  <ul id="staff-list" class="container">
+
+  </ul>
+  <!-- <div class="container" id="laypage">
+    <a href="javascript:;">上一页</a>
+    <a href="javascript:;" class="on">1</a>
+    <a href="javascript:;">2</a>
+    <a href="javascript:;">3</a>
+    <a href="javascript:;">4</a>
+    <span>...</span>
+    <a href="javascript:;">20</a>    
+    <a href="javascript:;">下一页</a>
+  </div> -->
+  <!-- @include ./includes/footer.html -->
+</body>
+
+</html>

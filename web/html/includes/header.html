@@ -1,0 +1,48 @@
+<header>
+	<a href="/@/index.html"><img src="/@@/images/logo-nav.png" alt="HWARI" class="logo"></a>
+	<nav class="menu">
+		<a href="/@/index.html#homepage" data-menuanchor="homepage">首页</a>
+		<a href="/@/index.html#energysave" data-menuanchor="energysave">使命愿景</a>
+		<a href="/@/index.html#innovation" data-menuanchor="innovation">产品介绍</a>
+		<a href="/@/index.html#partner" data-menuanchor="partner">合作伙伴</a>
+		<a href="/@/index.html#news" data-menuanchor="news">新闻动态</a>
+		<a href="/@/about/aboutus.html" id="aboutus">关于我们</a>
+		
+		<a href="/@/login/login.html" id="login">登录</a>
+		<a href="/@/login/register.html" id="reg">注册</a>
+		<a href="javascript:;" id="ewm">
+			<img src="/@@/images/home-ewm.png" alt="二维码">
+			<div>
+					<img src="/@@/images/index/wechat.jpg" alt="华瑞物联公众号">
+					<img src="/@@/images/index/qrcode.jpg" alt="华瑞物联App">
+			</div>
+		</a>
+	</nav>
+	<a href="javascript:;" id="personinfo">
+		<img src="" id="avatar">
+		<span id="username"></span>
+		<ul>
+			<li id="logout">退出登录</li>
+		</ul>
+	</a>
+</header>
+<script src="/@@/cookie.js"></script>
+<script>
+$(function(){
+	var userData=null
+	var token = CookieUtil.get('hwUserToken')
+	console.log(token)
+	if(token){
+		userData = JSON.parse(CookieUtil.get('hwUserData'))
+		$('header').addClass('haslogined')
+		$('#avatar')[0].src = userData.avatar || '/@@/images/login/goodowner.png'
+		$('#username').html(userData.name||'无名氏')
+	}
+  $('#logout').on('click',function(){
+		CookieUtil.unset('hwUserToken')
+		CookieUtil.unset('hwUserData')
+		location.reload()
+	})
+
+})
+</script>

@@ -1,0 +1,290 @@
+@import "@/styles/var.scss";
+.orderfollow{
+  .container{
+    width: 1000px;
+    margin: 0 auto
+  }
+  &-head{
+    background: #fff;
+    .el-breadcrumb{
+      padding: 20px 0;
+    }
+    p{
+      span{
+        position: relative;
+        &:after{
+          content:'';
+          position: absolute;
+          width: 100%;
+          height: 3px;        
+          background-color: #4999FF;
+          bottom: -15px;
+          left: 0;
+          display: none;
+        }
+      }      
+    }
+    em{
+      font-style: normal;
+      @include fontSize(12px,400);
+      color:#999
+    }
+    .el-col{
+      margin-bottom: 3px solid #4999FF;
+    }
+  }  
+  &-main{
+    background: #fff;
+    width: 1000px;
+    min-height: 400px;
+    margin: 20px auto;   
+    
+    &-list{
+      overflow: hidden;
+      list-style: none;
+      padding: 20px;
+      li{
+        float: left;
+        width: 32%;
+        margin: 0 2% 15px 0;
+        &:nth-of-type(3n){
+          margin-right: 0
+        } 
+      }
+    } 
+    .el-pagination {
+      text-align: right;
+      padding: 10px 20px ;
+    }   
+    
+    &-steps{
+      height: 100px;
+      overflow: hidden;
+      background: #F6F7F9 url('../../assets/order_branch_bg.png') no-repeat center center;
+      .el-steps{
+        width: 70% !important;
+        margin: 20px auto 0;
+      }
+      &-title{
+        color:#333;
+        line-height: 24px;
+        height: 24px;
+      }
+      &-description{
+        color:#999
+      }
+    }
+
+    &-title{
+      overflow: hidden;
+      position: relative;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+      dl{
+        float: left;
+        font-size: 12px;
+        overflow: hidden;
+        dt{
+          float: left;
+          color:#999
+        }
+        dd{
+          margin:0 20px 0 10px;
+          float: left;
+          color:#333
+        }
+      }
+      &-operate{
+        position: absolute;
+        width: 200px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        text-align: right;
+        a{
+          margin-right: 20px;
+        }
+      }
+      p.driver{
+        font-size: 12px;
+        color: #999;
+        b{
+          margin-left: 15px;
+          color:#333;
+          font-weight: 400;
+        }
+        span{
+          float: right;
+          background: #F6F7F9;
+          padding: 5px 10px;
+          border-radius: 15px;
+        }
+      }
+    }
+
+    &-deliveryinfo{ 
+      padding: 20px 0;
+      h2{
+        @include fontSize(16px,400);
+        margin: 0;        
+        color:#333;
+      }
+      dl{
+        font-size: 14px;
+        border: 1px solid #f1f3f5;
+        dt{
+          background-color: #F6F7F9;
+          padding: 5px 20px;
+          overflow: hidden;
+        }
+        dd{
+          margin-left: 0;
+          padding: 10px 20px;
+          border-bottom: 1px solid #f1f3f5;
+          overflow: hidden;          
+          &:last-of-type{
+            border-bottom: none;
+          }
+          img{
+            margin-right: 5px
+          }
+          p{
+            margin: 0;
+            height: 21px;
+            line-height: 21px;
+            &.name{
+              font-size: 16px;
+            }
+          }
+          div{
+            line-height: 42px;
+          }
+          .status{
+            text-align: center;
+          }
+          .operate{
+            text-align: right;
+            border-left: 1px solid #ddd
+          }
+        }
+      }
+    }
+
+    &-record{
+      border-top: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #f1f3f5;
+      h2{
+        margin: 0;
+        font-size: 16px;
+      }
+      ul{
+        margin-left: 8px;
+        padding:10px 16px 0;
+        border-left: 1px solid #ddd;
+        li{
+          margin-bottom: 20px;
+          position: relative;
+          &:before,
+          &:after{
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1px solid #ddd;
+            top: 0;
+            left: -25.5px;
+          }
+          &:after{
+            background: #4999FF;
+            border: none;
+            width: 8px;
+            height: 8px;
+            top: 5px;
+            left: -20.5px;            
+          }          
+          .label{
+            font-size: 14px;
+            color:#333
+          }
+          .time,.remark{
+            font-size: 12px;
+            color:#999
+          }
+          .imgbox{
+            padding: 10px 0;
+            img{
+              border: 1px solid #ddd;
+              width: 40px;
+              height: 40px;
+              margin-right: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &-refundRequest{      
+      h2{
+        @include fontSize(16px,400);
+        color:#333;
+        margin: 0;
+        padding: 20px 30px;
+        border-bottom: 1px solid #ddd;
+      }
+      &-content{
+        padding: 20px 30px;
+      }
+      &-uploadPic{
+        margin: 20px 0;
+        padding: 20px 0;
+        border-top:  1px solid #ddd;
+        border-bottom:  1px solid #ddd;
+        position: relative;
+        p{
+          color:#333;
+          font-size: 14px;
+        }
+        .el-button{
+          position: absolute;
+          right: 0
+        }        
+      }
+    }
+
+    &-status{
+      height: 100px;
+      box-sizing: border-box;
+      padding: 0 30px;
+      overflow: hidden;
+      background: #F6F7F9 url('../../assets/order_title_bg.png') no-repeat center right;
+      padding-top: 25px;
+      img{
+        float: left;
+        margin-right: 10px;
+      }
+      p{
+        margin: 0;
+        height: 25px;
+        line-height: 25px;
+        font-size: 14px;
+        color:#999
+      }
+      .label{
+        font-size: 18px;
+        color:#333
+      }
+    }
+  }
+  .search{
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+
+    .el-button{
+      float: right;
+      margin-left: 20px
+    }
+  }  
+}

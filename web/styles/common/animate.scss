@@ -1,0 +1,174 @@
+/*animate */
+
+//水平右旋
+@keyframes rotateR {
+    0% {
+        transform: rotate(0deg) 
+    }
+    100% {
+        transform: rotate(360deg) 
+    }
+}
+
+//水平左旋
+@keyframes rotateL {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(-360deg)
+    }
+}
+
+//扩散
+@keyframes spread {
+    0% {
+        opacity: 0;        
+        transform: scale(.2)
+    }
+    100% {
+        opacity: 1;        
+        transform: scale(1)
+    }
+}
+
+//缩小
+@keyframes narrow {
+    0% {
+        opacity: 0;        
+        transform: scale(2.8) 
+    }
+    100% {
+        opacity: 1;        
+        transform: scale(1)
+    }
+}
+
+//渐渐上浮显现
+@keyframes fadeup {
+    0% {
+        transform: translateY(20%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+//左侧移入显现
+@keyframes fadeleft {
+    0% {
+        transform: translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+//右侧移入显现
+@keyframes faderight {
+    0% {
+        transform: translateX(50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+//水平上下移动
+@keyframes shake {
+    0% {
+        transform: translateY(5%) scale(1);
+    }
+    25% {
+        transform: translateY(0%) scale(1);
+    }
+    50% {
+        transform: translateY(-5%) scale(1.05);
+    }
+    75% {
+        transform: translateY(0%) scale(1);
+    }
+    100% {
+        transform: translateY(5%) scale(1);
+    }
+}
+
+//首屏文字上浮
+@keyframes fadeuphome2 {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(-30%);
+        opacity: 1;
+    }    
+    70% {
+        transform: translateY(-30%);
+        opacity: 1;
+    }     
+    90% {
+        transform: translateY(-180%);
+        opacity: 0;
+    } 
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }    
+}
+
+@keyframes fadeuphome {
+    0%,100% {
+        transform: translateY(150%);
+        opacity: 0;
+    }
+    15%, 80% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    95% {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+}
+//首屏文字下沉
+@keyframes fadedown {
+    0%, 100% {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+    15%, 80% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    95% {
+        transform: translateY(150%);
+        opacity: 0;
+    }  
+}
+@keyframes fadedown2 {
+    0% {
+        transform: translateY(-150%);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(-30%);
+        opacity: 1;
+    }    
+    70% {
+        transform: translateY(-30%);
+        opacity: 1;
+    }    
+    90% {
+        transform: translateY(150%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(-150%);
+        opacity: 0;
+    }    
+}

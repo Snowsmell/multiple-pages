@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telphone=no, email=no">
+  <title>{{if title }}{{title}}{{else}}{{if text }}{{text}} - {{/if}}华瑞物联{{/if}}</title>
+  <link rel="shortcut icon" href="/@@/favicon.ico" type="image/x-icon">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  {{each styles}}<link href="{{$value}}" rel="stylesheet">
+  {{/each}}
+  <script src="/@@/lib/jquery-1.12.4.min.js"></script>
+  {{each scripts}}<script src="{{$value}}"></script>
+  {{/each}}

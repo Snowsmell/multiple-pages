@@ -1,0 +1,45 @@
+<% include('../includes/head.html', {
+  title: '',
+  text: '员工风采',
+  styles: ['/@@/styles/news.css'],
+  scripts: ['/@@/scripts/comm/base.js']
+}) %>
+</head>
+<body>
+  <!-- @include ./includes/header.html -->
+  <% include('../includes/banner.html', {
+    type: 'staff',
+    text: "员工风采",
+    img: "/@@/images/aboutus/staff.png"
+  }) %>
+  <main class="container">
+    <div class="brandnav">
+      <a href="/@/about/aboutus.html">关于我们</a> >
+      <a href="/@/about/staff.html">员工风采</a>
+    </div>
+    <h1></h1>
+    <aside>
+      <span class="time"></span>
+      <span class="author">来源：华瑞物联</span>
+    </aside>
+    <article class="content">
+      <!-- @include ./includes/loading.html -->
+    </article>
+
+  </main>
+  <!-- @include ./includes/footer.html -->
+</body>
+<script>
+  $(function () {
+    API.getNewsDetail(queryUrlParams('id'), function (res) {
+      if (!res[0]) {
+        var res = res[1]
+        $('h1').html(res.title)
+        $('.time').html(res.created_time.replace('T', '&nbsp;&nbsp;&nbsp;'))
+        $('.content').html(res.content)
+      }
+    })
+  })
+</script>
+
+</html>

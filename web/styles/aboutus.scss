@@ -1,0 +1,402 @@
+@import "./common/normalize.scss";
+@import "./common/global.scss";
+@import "./common/tools.scss";
+@import "./includes/header.scss";
+@import "./includes/banner.scss";
+@import "./includes/footer.scss";  
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}   
+ 
+header {
+  background-color: #122466;
+  position: relative;
+} 
+
+main {
+  color: #222;
+  >div {
+    width: 100%;
+    max-width: 1000px;
+    margin: 120px auto;
+    @include cf;
+  }
+}
+ 
+.introduction {
+  .imgbox {
+    float: left;
+    position: relative;
+    margin-right: 70px;
+    img {
+      vertical-align: bottom
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #f8f8f8;
+      top: 20px;
+      left: 20px;
+      z-index: -1;
+    }
+  }
+  .content {
+    h3 {
+      font-size: 24px;
+      margin: 10px 0 60px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 28px;
+      text-indent: 30px;
+    }
+  }
+}
+
+.culture {
+  >img {
+    float: right;
+  }
+  .content {
+    margin-right: 300px;
+    p {
+      margin: 15px 0;
+      color: #000;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 28px;
+      b {
+        font-size: 24px
+      }
+    }
+    h4 {
+      margin: 30px 0;
+      font-size: 14px;
+    }
+    ul {
+      li {
+        position: relative;
+        width: 49%;
+        float: left;
+        line-height: 30px;
+        font-size: 14px;
+        color: #000;
+        margin-bottom: 9px;
+        padding-left: 25px;
+        span {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 20px;
+          font-size: 18px;
+          color: #0fa5e4;
+        }
+        &:first-of-type(2n-1) {
+          margin-right: 2%;
+        }
+      }
+    }
+  }
+}
+
+.team {
+  text-align: center;
+  img {
+    max-width: 100%;
+  }
+}
+
+.staff,
+.joinus {
+  h3 {
+    position: relative;
+    text-align: center;
+    a {
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-weight: 100;
+      color: #0fa5e4;
+      font-size: 14px;
+    }
+  }
+  .list {
+    @include cf;
+    margin-top: 40px;
+    li {
+      float: left;
+      width: 33%;
+      margin: 10px .5% 0 0;
+      transition: all .5s;
+      &:nth-of-type(3) {
+        margin-right: 0
+      }
+      &:hover {
+        box-shadow: 0px 0px 5px 3px #eee;
+      }
+    }
+  }
+}
+
+.staff {
+  li {
+    .imgbox {
+      div{
+        overflow: hidden;
+        img {
+          max-width: initial;
+          width: 100%;
+        }
+      }
+    }
+    .text {
+      padding: 15px;
+      text-align: justify;
+      color: #000;
+      h5 {
+        font-size: 16px;
+      }
+      p {
+        font-size: 14px;
+        letter-spacing: .1px;
+        line-height: 16px;
+        &:first-of-type {
+          color: #999;
+          margin: 10px 0;
+        }
+      }
+    }
+  }
+}
+
+.joinus {
+  li {
+    border: 1px solid #eee;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+    h4 {
+      font-weight: 100;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background-color: #eee;
+      line-height: 70px;
+      font-size: 18px;
+      color: #fff;
+      div {
+        background-color: #1f4493;
+        position: absolute;
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+      }
+    }
+    dl {
+      padding: 60px 20px 20px;
+      text-align: justify;
+      text-shadow: .1px .1px #222;
+      line-height: 30px;
+      dt {
+        font-size: 18px;
+      }
+      dd {
+        font-size: 14px;
+        line-height: 30px;
+        height: 90px;
+        @include spill(3)
+      }
+    }
+    a {
+      display: block;
+      text-align: center;
+      font-size: 16px;
+      color: #0fa5e4;
+      line-height: 50px;
+      height: 50px;
+      border-top: 1px dashed #eee;
+    }
+    &:nth-of-type(2n) {
+      h4 {
+        div {
+          background-color: #1a7dd2
+        }
+      }
+    }
+    &:nth-of-type(3n) {
+      h4 {
+        div {
+          background-color: #76d8f1
+        }
+      }
+    }
+  }
+}
+
+@media(max-width:1200px) {
+  main {
+    padding: 0 20px;
+  }
+  .introduction {
+    .imgbox {
+      margin-right: 40px
+    }
+    .content {
+      h3 {
+        margin: 10px 0 30px
+      }
+    }
+  }
+  .culture .content {
+    h4 {
+      margin: 20px 0;
+    }
+    ul li {
+      line-height: 24px;
+    }
+  }
+}
+
+@media(max-width:768px) {
+  main {
+    >div {
+      margin: 30px auto;
+    }
+  }
+  .introduction {
+    .imgbox {
+      float: none;
+      margin: 20px auto;
+      width: 285px;
+      &:after {
+        left: 10px;
+        top: 10px
+      }
+    }
+    .content {
+      h3 {
+        margin: 10px 0;
+        font-size: 18px;
+      }
+    }
+  }
+  .culture {
+    >img {
+      display: none
+    }
+    .content {
+      margin-right: 0;
+    }
+  }
+  .team{
+    h3.title img{
+      width: 130px;
+    }
+  }
+  h3.title {
+    text-align: center;
+    img{width: 100px;}
+  }
+}
+
+@media(max-width:640px) {
+  .staff,
+  .joinus {
+    .list {
+      margin-top: 40px;
+      li {
+        float: left;
+        width: 48%;
+        margin: 10px 4% 0 0;
+        transition: all .5s;
+        .imgbox{
+          padding: 15px;
+        }
+        &:nth-of-type(2){
+          margin-right: 0;
+        }
+        &:nth-of-type(3) {
+          margin-right: 0
+        }
+      }
+    }
+  }  
+  .joinus{
+    .list{
+      li{
+        margin-bottom: 50px;
+      }
+    }
+  }
+}
+
+@media(max-width:480px) {
+  .staff,
+  .joinus {
+    .list {
+      margin-top: 25px;
+      li {
+        float: none;
+        width: 95%;
+        margin: 20px auto 0 ;
+        transition: all .5s;        
+        &:nth-of-type(2){
+          margin-right: auto;
+        }
+        &:nth-of-type(3) {
+          margin-right: auto
+        }
+      }
+    }
+  }    
+  .joinus{
+    .list{
+      padding-top: 20px;
+      li{
+        margin-bottom: 60px;
+        &:last-of-type{
+          margin-bottom: 0
+        }
+      }
+    }
+  }
+  .staff{
+    .list{
+      li{
+        @include cf;
+        .imgbox{
+          float: left;
+          width: 60px;          
+          padding: 0;
+          // img{
+          //   max-height: 90px 
+          // }
+        }
+        .text{
+          margin-left: 75px;
+          padding: 0;
+          h5{
+            font-size: 14px
+          }
+          p{
+            font-size: 12px;
+            &:first-of-type{
+              margin: 2px 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}

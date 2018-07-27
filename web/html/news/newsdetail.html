@@ -1,0 +1,48 @@
+<% include('../includes/head.html', {
+  title: '',
+  text: '新闻',
+  styles: ['/@@/styles/news.css'],
+  scripts: ['/@@/scripts/comm/base.js']
+}) %>
+</head>
+<body>
+  {{include '../includes/header.html'}}
+  <% include('../includes/banner.html', {
+    type: '',
+    text: "新闻资讯 &nbsp;&nbsp;实时掌握",
+    img: "/@@/images/news/news.png"
+  }) %>
+  <main>
+    <div class="container">
+        <div class="brandnav">
+            <a href="/@/index.html">首页</a> >
+            <a href="/@/news/news.html">新闻动态</a>
+          </div>
+          <h1></h1>
+          <aside>
+            <span class="time"></span>
+            <span class="author"></span>
+          </aside>
+          <article class="content">
+            <!-- @include ./includes/loading.html -->
+          </article>
+    </div>
+
+  </main>
+  <!-- @include ./includes/footer.html -->
+</body>
+<script>
+$(function () {
+  API.getNewsDetail(queryUrlParams('id'), function(res) {
+    if (!res[0]) {
+      var data = res[1]
+      $('h1').html(data.title)
+      $('.time').html(data.created_time.replace('T', '&nbsp;&nbsp;'))
+      $('.content').html(data.content)
+      $('.author').html('来源：' + (data.source || '华瑞物联'))
+    }
+  })
+})
+</script>
+
+</html>

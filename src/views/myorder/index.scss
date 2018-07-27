@@ -1,0 +1,252 @@
+@import '@/styles/var.scss';
+.myorder{
+  .container{
+    width: 1000px;
+    margin: 0 auto
+  }
+  &-head{
+    background: #fff;
+    .el-breadcrumb{
+      padding: 20px 0;
+    }
+    .el-col{
+      div{
+        cursor: pointer;
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 10px 5px;
+        color:#666;
+        border-bottom: 2px solid transparent;
+        transition: all .5s;
+        &.on{
+          border-color:#4999FF;
+        }
+      }
+    }
+  } 
+  &-main{
+    background: #fff;
+    width: 1000px;
+    min-height: 470px;
+    margin: 20px auto;      
+
+    &-content{
+      padding: 10px 30px
+    }
+
+    &-search{
+      padding: 20px;
+      border-bottom: 1px solid #ddd;
+  
+      .el-button{
+        float: right;
+        margin-left: 20px
+      }      
+    }
+    &-list{
+      ul{
+        overflow: hidden;
+        list-style: none;
+        padding: 20px;
+        li{
+          float: left;
+          width: 32%;
+          margin: 0 2% 15px 0;
+          &:nth-of-type(3n){
+            margin-right: 0
+          } 
+        }
+      }   
+      
+      .el-pagination {
+        text-align: right;
+        padding: 10px 20px ;
+      }      
+    }
+
+    &-detail{
+
+      &-status{
+        box-sizing: border-box;
+        padding: 25px 30px;
+        height: 100px;
+        background: #F6F7F9 url('../../assets/waybill_title.png') no-repeat right bottom;
+        img{
+          float: left;
+          width: 50px;
+          height: 50px;
+          margin-right: 15px;
+        }
+        p{
+          line-height: 25px;
+          margin: 0;
+          &.label{
+            color:#333;
+            font-size: 18px;
+          }     
+          &.message{
+            color:#999;
+            font-size: 14px;
+          }               
+        }
+      }
+
+      &-title{
+        h3{
+          @include fontSize(14px,400);
+          position: relative;
+          color:#333;
+          span{
+            position: absolute;
+            right: 0;
+            top: 0
+          }
+        }   
+        .el-row{
+          font-size: 12px;
+          .el-col{
+            &:last-of-type{
+              font-size: 14px;
+              text-align: right;
+            }            
+          }
+          .label{
+            color:#999
+          }
+        }     
+      }
+
+      &-deliveryinfo{
+        padding: 20px 0;
+        margin: 20px 0;
+        border-top: 1px solid #f1f3f5;
+        border-bottom: 1px solid #f1f3f5;
+        .el-col.info{
+          font-size: 14px;
+          line-height: 32px;
+          .label{
+            color:#999;
+            margin-left: 15px
+          }
+          .primary{
+            color:#4999FF
+          }
+          .el-button{
+            margin-left: 20px;
+            float: right;
+          }
+        }
+
+        .el-table{
+          margin: 15px 0;
+          font-size: 14px;
+          .cell{padding: 0}
+          thead{
+            tr{
+              th{
+                background-color: #F6F7F9;
+                padding :5px 0;
+                @include fontSize(12px,400);
+                color:#999
+              }
+            }
+          }
+        }
+        .el-dialog{
+          .dialog-footer{
+            .label{
+              margin: 0 5px 0 15px
+            }
+            .el-button{
+              margin-left: 20px
+            }
+          }
+        }
+      }
+      
+      &-record{
+        border-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #f1f3f5;
+        h2{
+          margin: 0;
+          font-size: 16px;
+        }
+        ul{
+          margin-left: 8px;
+          padding:10px 16px 0;
+          border-left: 1px solid #ddd;
+          li{
+            margin-bottom: 20px;
+            position: relative;
+            &:before,
+            &:after{
+              content: '';
+              position: absolute;
+              width: 16px;
+              height: 16px;
+              border-radius: 50%;
+              background: #fff;
+              border: 1px solid #ddd;
+              top: 0;
+              left: -25.5px;
+            }
+            &:after{
+              background: #4999FF;
+              border: none;
+              width: 8px;
+              height: 8px;
+              top: 5px;
+              left: -20.5px;            
+            }          
+            .label{
+              font-size: 14px;
+              color:#333
+            }
+            .time,.remark{
+              font-size: 12px;
+              color:#999
+            }
+            .imgbox{
+              padding: 10px 0;
+              img{
+                border: 1px solid #ddd;
+                width: 40px;
+                height: 40px;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+    &-quit{
+      h2{
+        @include fontSize(16px,400);
+        color:#333;
+        margin: 0;
+        padding: 20px 30px;
+        border-bottom: 1px solid #ddd;
+      }
+      &-content{
+        padding: 20px 30px;
+      }
+      &-uploadPic{
+        margin: 20px 0;
+        padding: 20px 0;
+        border-top:  1px solid #ddd;
+        border-bottom:  1px solid #ddd;
+        position: relative;
+        p{
+          color:#333;
+          font-size: 14px;
+        }
+        .el-button{
+          position: absolute;
+          right: 0
+        }        
+      }      
+    }
+  }  
+}

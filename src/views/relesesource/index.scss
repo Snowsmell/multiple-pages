@@ -1,0 +1,143 @@
+@import '@/styles/var.scss';
+
+.relesesource{
+  em{
+    color:#FF5B5B
+  }
+  .container{
+    width: 1000px;
+    margin: 0 auto
+  }
+  &-head{
+    background: #fff;
+    padding: 15px 0;
+
+    .oftenuse{
+      h3{
+        @include fontSize(16px,400);
+        .el-icon-info{
+          font-size: 12px;
+          color:#20ACFD;
+        }
+      }
+      .containbox{
+        position: relative;
+      }
+      .box{
+        width: 968px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        transition: all .5s;
+        li{
+          background-color: #F8F8FB;
+          padding: 10px;
+          box-sizing: border-box;
+          float: left;
+          width: 316px;
+          height: 90px;
+          margin-right:10px;
+          font-size: 14px;
+          color: #999;
+          position: relative;
+          h3{
+            margin: 0;
+            line-height: 30px;
+          }
+          div{
+            line-height: 24px;
+          }
+          h3,span{color:#333}
+          img{vertical-align: middle}
+          &:last-of-type{
+            margin-right: 0
+          }
+        }
+      }
+      .prev-button,
+      .next-button{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }     
+      .next-button{right: 0} 
+      .prev-button{left: 0} 
+      .close-button{
+        position: absolute;
+        top: 0px;
+        right: 5px
+      }
+      .fill-button{
+        position: absolute;
+        top: 10px;
+        right: 35px;
+        border-color: #20ACFD;
+        span{color:#20ACFD}      
+      }
+    }
+
+  }
+  &-main{
+    background: #fff;
+    width: 1000px;
+    min-height: 600px;
+    margin: 20px auto;
+    &-head{
+      padding:15px 20px;
+      border-bottom: 1px solid #ddd;
+      h2{
+        margin: 0;
+        i{margin-right: 10px}
+        @include fontSize(16px,400)
+      }      
+      p{
+        margin: 0;
+        line-height: 24px;
+        color:#999;        
+        @include fontSize(12px,400);
+      }
+    }
+    &-bottom{
+      margin-top: 50px;
+      border-top: 1px solid #ddd;
+      padding: 30px 0 20px;
+      text-align: right;
+      .relese-button{
+        margin-left: 25px;
+      }
+    }
+    .el-form{
+      padding: 20px;
+      .el-col{
+        position: relative;
+        .select-address{
+          position: absolute;
+          right: 0;
+          top: -35px;
+          color:#20ACFD;
+          cursor: pointer;
+          z-index: 99;
+        }
+      }
+    }
+  }
+  .oftenuse-address{
+    .el-radio-group{width: 100%;}
+    p{
+      box-sizing: border-box;
+      width: 100%;
+      padding: 15px 20px;
+      border-top: 1px solid #ddd;
+    }
+    .el-dialog__footer,
+    .dialog-footer{
+      background-color: #F6F7F9;
+      text-align: center
+    }
+  }
+}

@@ -1,0 +1,56 @@
+<% include('../includes/head.html', {
+  title: '',
+  text: '登录',
+  styles: ['/@@/styles/login.css'],
+  scripts: ['/@@/scripts/comm/base.js', '/@@/cookie.js', '/@@/scripts/login.js']
+}) %>
+</head>
+
+<body>
+  <header>
+    <a href="/@/index.html">
+      <img src="/@@/images/logo-nav.png" alt="HWARI">
+    </a>
+  </header>
+  <main>
+    <ul>
+      <li class="imgbox">
+        <img src="/@@/images/login/denglu-01.png" id="round1">
+        <img src="/@@/images/login/denglu-02.png" id="round2">
+        <img src="/@@/images/login/denglu-03.png">
+        <img src="/@@/images/login/denglu-04.png">
+        <img src="/@@/images/login/denglu-05.png" id="ball">
+      </li>
+      <li class="forms">
+        <div class="loginForm form-item on" data-type="loginForm">
+          <div>
+            <span class="on">企业货主</span>
+            <span>企业车主</span>
+          </div>
+          <ul>
+            <li>
+              <input type="text" placeholder="请输入用户名" id="loginUserName" autocomplete="off">
+              <div class="errmsg" id="usernameErr"></div>
+            </li>
+            <li>
+              <input type="password" placeholder="请输入密码" id="loginPsd" autocomplete="off">
+              <div class="errmsg" id="psdErr"></div>
+            </li>
+            <li id="forgetpsd">
+              <a href="/@/login/find.html">忘记密码</a>
+            </li>
+            <li>
+              <input type="submit" value="登  录" id="loginbtn"> 
+              <div class="errmsg" id="loginErr"></div>
+            </li>
+          </ul>
+          <p>没有账号？
+            <a href="/@/login/register.html" id="toRegister">立即注册</a>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </main>
+</body>
+
+</html>

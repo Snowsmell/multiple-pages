@@ -1,0 +1,58 @@
+<% include('../includes/head.html', {
+  title: '',
+  text: '登录',
+  styles: ['/@@/styles/login.css'],
+  scripts: ['/@@/scripts/comm/base.js', '/@@/cookie.js', '/@@/scripts/login.js']
+}) %>
+</head>
+
+<body>
+  <header>
+    <a href="/@/index.html">
+      <img src="/@@/images/logo-nav.png" alt="HWARI">
+    </a>
+  </header>
+  <main>
+    <ul>
+      <li class="imgbox">
+        <img src="/@@/images/login/denglu-01.png" id="round1">
+        <img src="/@@/images/login/denglu-02.png" id="round2">
+        <img src="/@@/images/login/denglu-03.png">
+        <img src="/@@/images/login/denglu-04.png">
+        <img src="/@@/images/login/denglu-05.png" id="ball">
+      </li>
+      <li class="forms">
+        <div class="resetpsd form-item on" data-type="resetpsd">
+          <div>
+            重置密码
+          </div>
+          <ul>
+            <li>
+              <input type="text" placeholder="请输入用户名" autocomplete="off" id="resetPsdName">
+              <div class="errmsg" id="resetPsdNameErr"></div>
+            </li>
+            <li>
+              <input type="password" placeholder="请输入新密码" autocomplete="off" id="resetPsdCode">
+              <div class="errmsg" id="resetPsdErr"></div>
+            </li>
+            <li>
+              <input type="text" placeholder="请输入手机号" autocomplete="off" id="resetPsdPhone">
+              <button class="sendmsm" data-serialNumber='' id="sendResetPsdMsg">获取验证码</button>
+              <div class="errmsg" id="resetPsdPhoneErr"></div>
+            </li>
+            <li>
+              <input type="text" placeholder="请输入验证码" autocomplete="off" id="resetPsdverifyCode">
+              <div class="errmsg" id="resetPsdcodeErr"></div>
+            </li>
+            <li>
+              <input type="submit" value="确认重置" id="resetPsd">
+              <div class="errmsg" id="resetmsg"></div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </main>
+</body>
+
+</html>
